@@ -63,7 +63,8 @@
 }
 .sidemenuItem{
   color: red !important;
-  font-weight: 600;
+  background-color: #f7f4f4 !important;
+  /*font-weight: 500;*/
  /* background-color: red !important;*/
 }
 .headerStyle{
@@ -82,4 +83,12 @@
 }
 .bgwhite{
   background-color: white;
+}
+.menuProfileImage{
+         height: 114px;
+    background-color: #444;
+    position: fixed;
+    top: 39px;
+    z-index: 1000;
+    width: 100%;
 }

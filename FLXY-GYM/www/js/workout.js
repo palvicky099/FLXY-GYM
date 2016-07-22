@@ -1,4 +1,3 @@
-
 app.controller('workoutCtrl', function($scope, $state) {
 $scope.$on('$ionicView.enter', function () {
 	$scope.listArray = 

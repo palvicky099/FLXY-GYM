@@ -8,10 +8,43 @@
         </div>
     </ion-header-bar>
     <ion-content>
-    <ion-list >
-  <ion-radio  class="Paddingtop" ng-model="choice" ng-value="'A'">Distance</ion-radio>
-  <ion-radio class="Paddingtop" ng-model="choice" ng-value="'B'">Time</ion-radio>
-  <ion-radio class="Paddingtop" ng-model="choice" ng-value="'C'">Package</ion-radio>
-</ion-list>
+    <div class="list card list-inset Paddingtop animated zoomIn">
+              <label class="item item-input item-select">
+                  <div class="input-label">
+                 Select Location               
+                    </div>
+                  <select>
+                      <option selected>Kandivali</option>
+                      <option >Malad</option>
+                      <option>Goregon</option>
+                      <option>Jogeshwari</option>           
+                       <option >Andheri</option>
+                      <option>Borivali</option>
+                      <option>Vashi</option>                   
+                  </select>
+              </label>
+          </div>
+<div class="card animated zoomIn">
+  <div class="item item-divider">
+   Select 
+  </div>
+  <ion-radio  class="" ng-model="choice" ng-value="'A'">Distance</ion-radio>
+  <ion-radio class="" ng-model="choice" ng-value="'B'">Time</ion-radio>
+  <ion-radio class="" ng-model="choice" ng-value="'C'">Package</ion-radio>
+</div>
+<div class="card  animated zoomIn">
+  <div class="item item-divider">
+   Select Grade
+  </div>
+  <ion-radio  class="" ng-model="choiceA" ng-value="'E'">Gold</ion-radio>
+  <ion-radio class="" ng-model="choiceA" ng-value="'F'">Silver</ion-radio>
+  <ion-radio class="" ng-model="choiceA" ng-value="'G'">Platinium</ion-radio>
+</div>
+  <div style="height:100px"></div>
     </ion-content>
+    <div class="tabs flxy-tabs animated zoomIn">
+  <a class="tab-item" style="font-weight: 900;" ng-click="closeMember()">
+    FILTER
+  </a>
+</div>
 </ion-modal-view>

@@ -12,13 +12,14 @@
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
   <ion-side-menu side="left">
-    <ion-content style="">
-    <div class="list border-none animated bounceInDown">
-       <a menu-close class="item item-thumbnail-left border-none" style="height: 130px;background-color: #444" ui-sref="profile">
+   <a menu-close class="item item-thumbnail-left border-none menuProfileImage" ui-sref="profile">
       <img src="https://s-media-cache-ak0.pinimg.com/736x/ec/bd/6e/ecbd6efaa534c402e691984e2f414ded.jpg" style="border-radius: 16px;margin-top: 10px">
       <h2 style="color: white;margin-top: 25px">Venkman<br>Doe</h2>
     </a>
-  <a menu-close class="item item-icon-left sidemenuItem  border-none" ui-sref="app.dashboard">
+    <ion-content style="background-color: #f7f4f4 !important;">
+    <div class="list border-none animated bounceInDown">
+      
+  <a menu-close class="item item-icon-left sidemenuItem  border-none" ui-sref="app.dashboard" style="margin-top:120px">
     <i class="icon ion-ios-home-outline"></i>
    Home
   </a>
@@ -56,9 +57,7 @@
   </a>
    </div>
 <div style="height: 30px"></div>
-  
     </ion-content>
-
   </ion-side-menu>
 <ion-header-bar class="flxy-button" style="height: 50px; position: fixed;top:0px">
               <div class="logoHeaderImg"></div>
