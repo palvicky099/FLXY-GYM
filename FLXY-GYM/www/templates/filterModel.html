@@ -1,0 +1,17 @@
+<ion-modal-view cache-view="false" class="greyBackgorund">
+    <ion-header-bar class="flxy-button">
+        <h1 class="title white-font" style="color:white;">FILTER</h1>
+        <div class="buttons ">
+            <button class="button button-clear flxy-button" ng-click="closeMember()">
+                <i class="ion-close-circled" style="font-size:30px;"></i>
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+    <ion-list >
+  <ion-radio  class="Paddingtop" ng-model="choice" ng-value="'A'">Distance</ion-radio>
+  <ion-radio class="Paddingtop" ng-model="choice" ng-value="'B'">Time</ion-radio>
+  <ion-radio class="Paddingtop" ng-model="choice" ng-value="'C'">Package</ion-radio>
+</ion-list>
+    </ion-content>
+</ion-modal-view>
