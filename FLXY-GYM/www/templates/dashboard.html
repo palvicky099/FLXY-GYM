@@ -11,13 +11,13 @@
   <div class="h1 title">Header Buttons</div>
   <button class="button button-clear button-positive">Edit</button>
    </div> -->
-  <ion-content>
-   <ion-list>
-        <ion-item style="background-color: black" class="Paddingtop  animated zoomIn" back-img="{{l.categoryImg}}"  ng-repeat="l in dashList" ng-style="{'height': '200px'}" ui-sref="list" ng-click="goList(l)">
-           <h1 class="textOnList" style="color:#ddd; text-align: center;margin-top:59px">{{l.categoryName}}</h1> 
+  <ion-content class="padding">
+   <ion-list class="card">
+        <ion-item style="background-color: grey" class="animated zoomIn" back-img="{{l.categoryImg}}"  ng-repeat="l in dashList" ng-style="{'height': '170px'}" ui-sref="list" ng-click="goList(l)">
+           <h1 class="textOnList" style="color:#ddd;margin-left: 15px !important; text-align: center;margin-top:50px">{{l.categoryName}}</h1> 
+           <p  style="color:#ddd; text-align: center;margin-left: 15px !important;">23 Activitys Avalable</p>
         </ion-item>
     </ion-list>
-
 <div style="height: 100px"></div>
   </ion-content>
   <div class="tabs tabs-icon-top flxy-tabs" style="font-weight: 900;height: 60px">
@@ -26,7 +26,7 @@
     WORKOUT
   </a>
   <a class="tab-item" ui-sref="feeds" style="font-weight: 900;">
-    <i class="icon ion-wifi"></i>
+    <i class="icon ion-social-rss"></i>
     FEEDS
   </a>
   <a class="tab-item" ui-sref="placenearby" style="font-weight: 900;">

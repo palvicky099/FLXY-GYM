@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var app = angular.module('app', ['ionic', 'starter.controllers', 'ngCordova'])
+var app = angular.module('app', ['ionic', 'starter.controllers', 'ngCordova', 'ionic.rating'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -90,6 +90,26 @@ var app = angular.module('app', ['ionic', 'starter.controllers', 'ngCordova'])
            url: "/distanceMap",
            templateUrl: "templates/distanceMap.html",
            controller: 'distanceMapCtrl'
+       })
+           .state('bookDate', {
+           url: "/bookDate",
+           templateUrl: "templates/bookDate.html",
+           controller: 'bookDateCtrl'
+       })
+             .state('cart', {
+           url: "/cart",
+           templateUrl: "templates/cart.html",
+           controller: 'cartCtrl'
+       })
+             .state('orderDetail', {
+           url: "/orderDetail",
+           templateUrl: "templates/orderDetail.html",
+           controller: 'orderDetailCtrl'
+       })
+               .state('gymGallary', {
+           url: "/gymGallary",
+           templateUrl: "templates/gymGallary.html",
+           controller: 'gymGallaryCtrl'
        })
 ;
   // if none of the above states are matched, use this as the fallback

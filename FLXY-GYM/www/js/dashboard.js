@@ -90,7 +90,7 @@ app.directive('backImg', function(){
             'background': 'linear-gradient(rgba(0, 0, 0, 0.60),rgba(0, 0, 0, 0.60)),url(' + url +')',
             'background-size' : 'cover',
             'height':'100%',
-              'border':'4px solid black'
+              'border':'0px solid black'
         });
     }
 

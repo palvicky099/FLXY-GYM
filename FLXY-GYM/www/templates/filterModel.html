@@ -30,15 +30,16 @@
   </div>
   <ion-radio  class="" ng-model="choice" ng-value="'A'">Distance</ion-radio>
   <ion-radio class="" ng-model="choice" ng-value="'B'">Time</ion-radio>
-  <ion-radio class="" ng-model="choice" ng-value="'C'">Package</ion-radio>
 </div>
 <div class="card  animated zoomIn">
   <div class="item item-divider">
-   Select Grade
+   Select Price
   </div>
-  <ion-radio  class="" ng-model="choiceA" ng-value="'E'">Gold</ion-radio>
-  <ion-radio class="" ng-model="choiceA" ng-value="'F'">Silver</ion-radio>
-  <ion-radio class="" ng-model="choiceA" ng-value="'G'">Platinium</ion-radio>
+  <div class="item range">
+  20
+  <input type="range" name="">
+  1000
+</div>
 </div>
   <div style="height:100px"></div>
     </ion-content>
@@ -48,3 +49,44 @@
   </a>
 </div>
 </ion-modal-view>
+<style>
+  .share_helper:before {
+    content:url('images/30.png');
+    position: absolute;
+}
+ 
+.share_helper {
+     position: relative;
+     float: right;
+     right:-38px;
+     -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+ 
+.share_helper ul {
+    background: #e5e5e5;
+    border-bottom-left-radius: 5px;
+    position: relative;
+    left: 25px;
+}
+ 
+.share_helper ul li {
+    font-size: 25px;
+    list-style: none;
+    padding: 8px;
+}
+ 
+.share_helper ul li a {
+    color: #000;
+}
+ 
+.share_helper ul li a:hover {
+    text-decoration: none;
+    color: #8e8e8e;
+}
+ 
+.share_helper:hover {
+     right:25px;
+}
+</style>
