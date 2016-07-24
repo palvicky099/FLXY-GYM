@@ -7,7 +7,6 @@ app.controller('listCtrl', function($scope, $state, $ionicModal, $ionicLoading) 
     {
         nextDay.setDate(myDate.getDate() + i);
         DataArray.push(nextDay.getFullYear() + '-' + ('0' + (nextDay.getMonth() + 1)).slice(-2) + '-' + ('0' + nextDay.getDate()).slice(-2));
-
     }
     console.log("Data Array is" + "" + DataArray)
     $scope.dateScope = DataArray;
@@ -43,7 +42,7 @@ app.controller('listCtrl', function($scope, $state, $ionicModal, $ionicLoading) 
 	{
     "gymId":"3",
     "gymName":"ITC Gym Goregon",
-    "gymImg":"http://www.crabwallmanorhotelandspa.com/getattachment/The-Spa/Fitness/Slideshow/slide-1/gym-sit-ups.jpg.aspx?width=5616&height=3744&ext=.jpg",
+    "gymImg":"http://www.active.com/Assets/Running/460/7-Cross-Training-Exercises460.jpg",
     "gymTime":"9 am to 12pm",
     "gymPrice":"800 Rs",
     "gymDistance":"72373.0909 kms",
@@ -106,7 +105,7 @@ app.controller('listCtrl', function($scope, $state, $ionicModal, $ionicLoading) 
     {
     "gymId":"3",
     "gymName":"ITC Gym Goregon",
-    "gymImg":"http://www.crabwallmanorhotelandspa.com/getattachment/The-Spa/Fitness/Slideshow/slide-1/gym-sit-ups.jpg.aspx?width=5616&height=3744&ext=.jpg",
+    "gymImg":"http://www.active.com/Assets/Running/460/7-Cross-Training-Exercises460.jpg",
     "gymTime":"9 am to 12pm",
     "gymPrice":"800 Rs",
     "gymDistance":"72373.0909 kms",
@@ -169,7 +168,7 @@ app.controller('listCtrl', function($scope, $state, $ionicModal, $ionicLoading) 
     {
     "gymId":"3",
     "gymName":"ITC Gym Goregon",
-    "gymImg":"http://www.crabwallmanorhotelandspa.com/getattachment/The-Spa/Fitness/Slideshow/slide-1/gym-sit-ups.jpg.aspx?width=5616&height=3744&ext=.jpg",
+    "gymImg":"http://www.active.com/Assets/Running/460/7-Cross-Training-Exercises460.jpg",
     "gymTime":"9 am to 12pm",
     "gymPrice":"800 Rs",
     "gymDistance":"72373.0909 kms",
@@ -232,7 +231,7 @@ app.controller('listCtrl', function($scope, $state, $ionicModal, $ionicLoading) 
     {
     "gymId":"3",
     "gymName":"ITC Gym Goregon",
-    "gymImg":"http://www.crabwallmanorhotelandspa.com/getattachment/The-Spa/Fitness/Slideshow/slide-1/gym-sit-ups.jpg.aspx?width=5616&height=3744&ext=.jpg",
+    "gymImg":"http://www.active.com/Assets/Running/460/7-Cross-Training-Exercises460.jpg",
     "gymTime":"9 am to 12pm",
     "gymPrice":"800 Rs",
     "gymDistance":"72373.0909 kms",
@@ -277,12 +276,23 @@ app.controller('listCtrl', function($scope, $state, $ionicModal, $ionicLoading) 
   $scope.rating.max = 5;
     $scope.goDetail=function(l){
 window.localStorage.setItem("itemDetails", JSON.stringify(l));
-$state.go('detail');
-    }
+$ionicLoading.show({
+                 noBackdrop: false,
+                template: '<p class="item"><ion-spinner icon="lines"/></p><p class="item flxy-button">Please Wait...</p>',
+                 content: 'Loading',
+                animation: 'fade-in',
+                showBackdrop: true,
+                duration: 3000,
+                maxWidth: 200,
+                showDelay: 0
+        });
+setTimeout(function(){
+   $state.go('detail');
+    },2000)     }
      $ionicModal.fromTemplateUrl('templates/filterModel.html', {
         scope: $scope,
-        backdropClickToClose: false,
-        hardwareBackButtonClose: false
+        backdropClickToClose: true,
+        hardwareBackButtonClose: true
     }).then(function (modal) {
         $scope.selectMember = modal;
     });

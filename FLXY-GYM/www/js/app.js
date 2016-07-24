@@ -111,7 +111,17 @@ var app = angular.module('app', ['ionic', 'starter.controllers', 'ngCordova', 'i
            templateUrl: "templates/gymGallary.html",
            controller: 'gymGallaryCtrl'
        })
+                   .state('flxyMemberShip', {
+           url: "/flxyMemberShip",
+           templateUrl: "templates/flxyMemberShip.html",
+           controller: 'flxyMemberShipCtrl'
+       })
+           .state('forgotPassword', {
+           url: "/forgotPassword",
+           templateUrl: "templates/forgotPassword.html",
+           controller: 'forgotPasswordCtrl'
+       })
 ;
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/dashboard');
+  $urlRouterProvider.otherwise('/login');
 });

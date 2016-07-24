@@ -24,7 +24,7 @@ $scope.$on('$ionicView.enter', function () {
 	{
     "gymId":"3",
     "gymName":"ITC Gym Goregon",
-    "gymImg":"http://www.crabwallmanorhotelandspa.com/getattachment/The-Spa/Fitness/Slideshow/slide-1/gym-sit-ups.jpg.aspx?width=5616&height=3744&ext=.jpg",
+    "gymImg":"http://www.active.com/Assets/Running/460/7-Cross-Training-Exercises460.jpg",
     "gymTime":"9 am",
     "gymPrice":"800 Rs",
     "gymDistance":"72373.0909 kms",

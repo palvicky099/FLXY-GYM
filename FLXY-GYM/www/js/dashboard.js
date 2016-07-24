@@ -1,4 +1,4 @@
-app.controller('dashboardCtrl', function($cordovaGeolocation, $scope, $state, $ionicSideMenuDelegate) {
+app.controller('dashboardCtrl', function($cordovaGeolocation, $scope, $state, $ionicSideMenuDelegate, $ionicLoading) {
 	$scope.$on('$ionicView.enter', function () {
  $scope.toggleLeftSideMenu = function() {
     $ionicSideMenuDelegate.toggleLeft();
@@ -47,13 +47,51 @@ app.controller('dashboardCtrl', function($cordovaGeolocation, $scope, $state, $i
 	{
 "categoryId":"9",
 "categoryName":"PILATES",
-"categoryImg":"http://images.fitnessmagazine.mdpcdn.com/sites/fitnessmagazine.com/files/mat-pilates.jpg",
-	}
+"categoryImg":"https://breckenhealth.com.au/files/2015/10/pilates_slide01.png",
+	},
+  {
+"categoryId":"10",
+"categoryName":"WEIGHT TRANING",
+"categoryImg":" http://img.aws.livestrongcdn.com/ls-article-image-640/ds-photo/getty/article/199/251/181046007.jpg",
+  },
+  {
+"categoryId":"11",
+"categoryName":"BOXING",
+"categoryImg":"http://www.bhmpics.com/thumbs/kick_boxing_training_bag_to_hit-t3.jpg",
+  }
+ ,
+  {
+"categoryId":"12",
+"categoryName":"CROSSFIT",
+"categoryImg":"http://www.domyos.co.uk/sites/domyos/files/conseils-sculpt-exercice-challenge-cross-training-header.jpg",
+  },
+  {
+"categoryId":"13",
+"categoryName":"AROBICS",
+"categoryImg":"http://cdn2.stylecraze.com/wp-content/uploads/2013/07/4312-best-aerobic-exercise-videos.jpg",
+  }
+  ,
+  {
+"categoryId":"14",
+"categoryName":"ZUMBA",
+"categoryImg":"http://wavesgym.com/wp-content/uploads/2015/01/Zumba-1.jpg",
+  }
 	];
 	$scope.goList=function(l){
     window.localStorage.setItem("itemCategory", JSON.stringify(l));
-$state.go('list');
-	}
+               $ionicLoading.show({
+                 noBackdrop: false,
+                template: '<p class="item"><ion-spinner icon="lines"/></p><p class="item flxy-button">Please Wait...</p>',
+                 content: 'Loading',
+                animation: 'fade-in',
+                showBackdrop: true,
+                duration: 3000,
+                maxWidth: 200,
+                showDelay: 0
+        });
+setTimeout(function(){
+   $state.go('list');
+    },2000)	}
  setTimeout(function () {
             current();
         },2000);

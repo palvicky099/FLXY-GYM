@@ -13,16 +13,27 @@
     <input type="password"  placeholder="Password" class="loginField" ng-model="model.password">
   </label>
   </div>
-  <div align="center" style="margin-top: 30px">  
- <button class="button button-block redButton animated zoomIn" ui-sref="register" style="width:95%;">
+  <div align="center" >  
+ <button class="button button-block redButton animated zoomIn" ng-click="login()" style="width:95%;">
   LOGIN
-</button>
-<button class="button button-block redButton animated zoomIn" ui-sref="register" style="width:95%;">
-  Register
-</button>
+</button><!-- 
+<button class="button button-block redButton animated zoomIn"  ng-click="register()" style="width:95%;">
+SIGNUP</button> --><!-- 
+<div class="row" style="margin-top: -10px">
+  <div class="col"></div>
+  <div class="col"><button class="button button-block redButton animated zoomIn" ng-click="forgotPassword()" style="width:95%;">
+  FORGOT PASSWORD
+</button></div> -->
 </div>
 
-
-
+</div>
   </ion-content>
+   <div class="tabs redButton animated zoomIn">
+  <a class="tab-item" style="font-weight: 900;" ng-click="register()">
+    SIGNUP
+  </a>
+  <a class="tab-item" style="font-weight: 900;" ng-click="forgotPassword()">
+     FORGOT
+  </a>
+</div>
 </ion-view>
